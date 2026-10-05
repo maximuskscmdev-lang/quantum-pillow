@@ -378,6 +378,13 @@ footer {
   60% { transform: scale(1.15) rotate(4deg); }
   100% { transform: scale(1) rotate(0); }
 }
+.prank-img {
+  display: block; width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  margin-bottom: 18px;
+  animation: jiggle .5s ease;
+}
 .prank-reveal h3 { font-size: 24px; }
 .prank-reveal > p:not(.haha) { color: var(--muted); font-size: 15px; }
 .prank-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 24px; }
