@@ -1,4 +1,9 @@
-const BASE_PRICE = 549;
+const BASE_PRICE = 9999;
+const CURRENCY = '₹';
+
+function money(n) {
+  return CURRENCY + n.toLocaleString('en-IN');
+}
 
 const sizeSelect = document.getElementById('size');
 const totalEl = document.getElementById('total');
@@ -25,7 +30,7 @@ function price() {
 }
 
 function updateTotal() {
-  totalEl.textContent = '$' + price();
+  totalEl.textContent = money(price());
 }
 
 function showToast(msg) {
@@ -38,7 +43,7 @@ function showToast(msg) {
 function render() {
   const qty = cart.reduce((n, i) => n + i.qty, 0);
   cartCount.textContent = qty;
-  subtotalEl.textContent = '$' + cart.reduce((n, i) => n + i.qty * i.price, 0);
+  subtotalEl.textContent = money(cart.reduce((n, i) => n + i.qty * i.price, 0));
 
   if (!cart.length) {
     cartItems.innerHTML = '<p class="empty">Your cart is empty.<br>Go wake up properly.</p>';
@@ -53,7 +58,7 @@ function render() {
         <small>${i.label}</small>
         <small>Qty ${i.qty}</small>
       </div>
-      <p class="price">$${i.price * i.qty}</p>
+      <p class="price">${money(i.price * i.qty)}</p>
       <button class="rm" data-idx="${idx}" aria-label="Remove">&times;</button>
     </div>
   `).join('');
@@ -61,8 +66,9 @@ function render() {
 
 function buildLabel() {
   const sizeTxt = sizeSelect.options[sizeSelect.selectedIndex].text.split(' (')[0];
-  const moldTxt = selected('mold').parentElement.textContent.trim().replace(/\s*\(\+\$\d+\)$/, '');
-  const coreTxt = selected('core').parentElement.textContent.trim().replace(/\s*\(\+\$\d+\)$/, '');
+  const stripAddon = s => s.replace(/\s*\(\+[^)]*\)$/, '');
+  const moldTxt = stripAddon(selected('mold').parentElement.textContent.trim());
+  const coreTxt = stripAddon(selected('core').parentElement.textContent.trim());
   return `${sizeTxt} · ${moldTxt} · ${coreTxt}`;
 }
 
