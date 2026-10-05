@@ -170,8 +170,8 @@ a { color: inherit; text-decoration: none; }
 @keyframes float { 50% { transform: translateY(-22px); } }
 
 /* SECTIONS */
-.features, .science, .specs, .buy { max-width: 1200px; margin: 0 auto; padding: 80px 28px; }
-.features h2, .science h2, .specs h2 { font-size: clamp(28px, 4vw, 42px); }
+.features, .science, .comfort, .specs, .buy { max-width: 1200px; margin: 0 auto; padding: 80px 28px; }
+.features h2, .science h2, .comfort h2, .specs h2 { font-size: clamp(28px, 4vw, 42px); }
 .sub { color: var(--muted); margin-top: -18px; }
 
 .grid {

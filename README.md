@@ -3,22 +3,26 @@
 A single-page product site for the fictional **quantum.pillow** — an ultra-high-tech
 nano-foam sleep system.
 
-## Features showcased
+## Page structure
 
-- AI-powered sleep tracking (quality sleep hours, posture/head-position change detection,
-  personalized insights, via a dedicated AI mobile app)
-- Personalized pillow design (customizable to face shape and head shape, adjustable support
-  and contours, better head and neck support)
-- 30-day free trial before committing
-- Active noise cancellation (6-mic hybrid ANC, −28 dB active)
-- White noise and sound library (40+ presets, per-layer volume, timed fade-out)
-- Lucid dream control (40 Hz binaural, REM-timed audio/light cues, dream journal)
+Sections run in this order:
 
-## The science
-
-- Cooling fills (bamboo charcoal, graphene) conduct heat away from the body multiple times
-  faster than copper, which is what prevents night sweats
-- Bioclay / memory foam core with slow rebound — a property traditional pillows don't have
+1. **Features** — the three headline capabilities
+   - AI-powered sleep tracking (quality sleep hours, posture/head-position change detection,
+     personalized insights, via a dedicated AI mobile app)
+   - Personalized pillow design (customizable to face shape and head shape, adjustable support
+     and contours, better head and neck support)
+   - 30-day free trial before committing
+2. **Science** — why the materials behave the way they do
+   - Cooling fills (bamboo charcoal, graphene) conduct heat away from the body multiple times
+     faster than copper, which is what prevents night sweats
+   - Bioclay / memory foam core with slow rebound — a property traditional pillows don't have
+3. **Sound & Dreams**
+   - Active noise cancellation (6-mic hybrid ANC, −28 dB active)
+   - White noise and sound library (40+ presets, per-layer volume, timed fade-out)
+   - Lucid dream control (40 Hz binaural, REM-timed audio/light cues, dream journal)
+4. **Specs** — technical specification table
+5. **Buy** — cart with size / head-mold / core options
 
 Plus a working cart with size / head-mold / core options, live price totals, a slide-out
 cart drawer, and a deliberately fake checkout. Pressing **Checkout** runs a fake
